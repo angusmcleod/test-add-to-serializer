@@ -12,7 +12,10 @@ after_initialize do
   add_to_serializer(:basic_category, :add_to_serializer_test_2, false) { "Basic Category Test 2" }
   
   require_dependency 'basic_category_serializer'
-  class BasicCategorySerializer
+  class ::BasicCategorySerializer
+    attributes :add_to_serializer_test_3,
+               :add_to_serializer_test_4
+               
     def add_to_serializer_test_3
       "Basic Category Test 3"
     end
@@ -22,16 +25,19 @@ after_initialize do
     end
   end
   
-  add_to_serializer(:site_category, :add_to_serializer_test_1) { "Site Category Test 1" }
-  add_to_serializer(:site_category, :add_to_serializer_test_2, false) { "Site Category Test 2" }
+  add_to_serializer(:site_category, :add_to_serializer_test_5) { "Site Category Test 1" }
+  add_to_serializer(:site_category, :add_to_serializer_test_6, false) { "Site Category Test 2" }
   
   require_dependency 'site_category_serializer'
-  class SiteCategorySerializer
-    def add_to_serializer_test_3
+  class ::SiteCategorySerializer
+    attributes :add_to_serializer_test_7,
+               :add_to_serializer_test_8
+
+    def add_to_serializer_test_5
       "Site Category Test 3"
     end
     
-    def add_to_serializer_test_4
+    def add_to_serializer_test_6
       "Site Category Test 4"
     end
   end
