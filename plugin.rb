@@ -33,11 +33,11 @@ after_initialize do
     attributes :add_to_serializer_test_7,
                :add_to_serializer_test_8
 
-    def add_to_serializer_test_5
+    def add_to_serializer_test_7
       "Site Category Test 3"
     end
     
-    def add_to_serializer_test_6
+    def add_to_serializer_test_8
       "Site Category Test 4"
     end
   end
